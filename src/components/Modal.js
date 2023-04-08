@@ -13,9 +13,9 @@ export const Modal = ({ children, onClose }) => {
          onClose();
       }
     };
-    document.addEventListener("keydown",handleEsc);
+    window.addEventListener("keydown",handleEsc);
     return () => {
-      document.removeEventListener("keydown", handleEsc);
+      window.removeEventListener("keydown", handleEsc);
     };
   });
 
